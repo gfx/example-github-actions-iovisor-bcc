@@ -1,0 +1,18 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Build a docker image
+        run: |
+          docker build -t image .
+
+      - name: Run a script in containers
+        run: |
+          docker run image tplist-bpfcc /bin/ls
