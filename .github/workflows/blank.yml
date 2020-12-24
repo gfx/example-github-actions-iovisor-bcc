@@ -15,4 +15,5 @@ jobs:
 
       - name: Run a script in containers
         run: |
-          docker run -v /sys/kernel/debug:/sys/kernel/debug image
+          ls
+          docker run -v $PWD:/work -v /sys/kernel/debug:/sys/kernel/debug image

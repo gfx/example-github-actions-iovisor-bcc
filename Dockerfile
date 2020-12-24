@@ -6,4 +6,4 @@ RUN apt-get --yes update
 RUN apt-get install --yes \
   bpfcc-tools
 
-ENTRYPOINT ["tplist-bpfcc", "-p", "1"]
+ENTRYPOINT ["python3", "foo.py", "-p", "1"]
