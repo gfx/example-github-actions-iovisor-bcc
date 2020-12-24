@@ -21,6 +21,7 @@ jobs:
       - name: Run a script in containers
         run: |
           docker run \
+            --privileged \
             -v $PWD:/workspace \
             -v /sys/kernel/debug:/sys/kernel/debug \
             -v /lib/modules:/lib/modules:ro \
