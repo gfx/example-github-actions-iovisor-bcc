@@ -11,8 +11,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          apt-get --yes update
-          apt-get install --yes bpfcc-tools
+          sudo apt-get --yes update
+          sudo apt-get install --yes bpfcc-tools
 
       - name: Build a docker image
         run: |
