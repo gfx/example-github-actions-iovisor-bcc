@@ -6,4 +6,4 @@ RUN apt-get --yes update
 RUN apt-get install --yes \
   bpfcc-tools
 
-ENTRYPOINT ["python3", "foo.py", "-p", "1"]
+ENTRYPOINT ["python3", "/workspace/foo.py", "-p", "1"]
