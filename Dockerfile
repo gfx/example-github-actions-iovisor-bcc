@@ -6,4 +6,4 @@ RUN apt-get --yes update
 RUN apt-get install --yes \
   bpfcc-tools
 
-ENTRYPOINT ["tplist-bpfcc", "/bin/ls"]
+ENTRYPOINT ["tplist-bpfcc", "-p", "1"]
