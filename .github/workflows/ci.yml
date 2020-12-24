@@ -9,11 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: |
-          sudo apt-get --yes update
-          sudo apt-get install --yes bpfcc-tools
-
       - name: Build a docker image
         run: |
           docker build -t image .
