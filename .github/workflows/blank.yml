@@ -9,6 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: |
+          apt-get --yes update
+          apt-get install --yes bpfcc-tools
+
       - name: Build a docker image
         run: |
           docker build -t image .
@@ -19,4 +24,6 @@ jobs:
             -v $PWD:/workspace \
             -v /sys/kernel/debug:/sys/kernel/debug \
             -v /lib/modules:/lib/modules:ro \
+            -v /usr/src:/usr/src:ro \
+            -v /usr/include/linux:/usr/include/linux:ro \
             image
