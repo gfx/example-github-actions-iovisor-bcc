@@ -4,6 +4,6 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get --yes update
 RUN apt-get install --yes \
-  bpf-tools
+  bpfcc-tools
 
 ENTRYPOINT ["tplist-bpfcc", "/bin/ls"]
