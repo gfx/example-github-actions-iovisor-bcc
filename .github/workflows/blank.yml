@@ -24,5 +24,6 @@ jobs:
             --privileged \
             -v $PWD:/workspace \
             -v /sys/kernel/debug:/sys/kernel/debug \
+            -v /lib/modules:/lib/modules:ro \
             -v /usr/src:/usr/src:ro \
             image
